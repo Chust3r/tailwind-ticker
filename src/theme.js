@@ -39,42 +39,22 @@ export default {
 			},
 		},
 	},
-	animationDuration: {
-		none: 0,
-		'5s': '5s',
-		'10s': '10s',
-		'15s': '15s',
-		'20s': '20s',
-		'25s': '25s',
-		'30s': '30s',
-		'35s': '35s',
-		'40s': '40s',
-	},
-	animationDelay: {
-		none: 0,
-		'1s': '5s',
-		'2s': '10s',
-		'3s': '15s',
-		'4s': '20s',
-		'5s': '25s',
-		'10s': '30s',
-	},
 	tickerBase: {
-		'.tickerX': {
+		'.ticker': {
 			overflow: 'hidden',
 			display: 'flex',
 		},
-		'.tickerY': {
+		'.ticker-y': {
 			overflow: 'hidden',
 			display: 'flex',
 			'flex-direction': 'column',
 			'align-items': 'center',
 		},
-		'.tickerX-wrapper': {
+		'.ticker-wrapper': {
 			width: 'max-content',
 			display: 'flex',
 		},
-		'.tickerY-wrapper': {
+		'.ticker-wrapper-y': {
 			'flex-direction': 'column',
 		},
 		'.ticker-mask-x': {

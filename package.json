@@ -1,6 +1,6 @@
 {
 	"name": "tailwind-ticker",
-	"version": "1.0.3",
+	"version": "0.0.3",
 	"description": "Tailwind CSS plugin for add simple & beautifully animated ticker",
 	"main": "./src/index.js",
 	"type": "module",
