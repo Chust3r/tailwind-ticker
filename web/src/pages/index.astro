@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro'
+import TickerMain from '../components/ticker/ticker-main.astro'
+
+import Codeblock from '../components/codeblock/codeblock.astro'
+
+const code = `import ticker from 'tailwind-ticker'
+export default {
+  // ...rest of the options
+  plugins: [ticker],
+}`
+---
+
+<Layout title='Tailwind Ticker'>
+	<div class='flex flex-col gap-3'>
+		<h1 class='text-white text-center text-7xl font-semibold'>
+			Tailwind <span class='animate-bg'>Ticker</span>
+		</h1>
+		<p class='text-slate-50/50 text-center text-xl'>
+			A simple and beautiful plugin for TailwindCSS
+		</p>
+		<div class='flex flex-col mx-auto gap-2 mt-5'>
+			<h2 class='text-slate-50/50 font-medium'>Installation</h2>
+			<Codeblock
+				code={`npm i tailwind-ticker`}
+				lang='sh'
+				class='w-[384px]'
+			/>
+			<h2 class='text-slate-50/50 font-medium'>Config</h2>
+			<Codeblock code={code} lang='js' class='w-[384px]' />
+		</div>
+	</div>
+</Layout>
+
+<style is:inline>
+	.animate-bg {
+		background: linear-gradient(
+			to right,
+			#ffcccc,
+			#ffcc99,
+			#ffff99,
+			#ccffcc,
+			#99ffff,
+			#9999ff,
+			#cc99ff,
+			#ff99ff
+		);
+		color: transparent;
+		background-clip: text;
+		background-size: 400%;
+		animation: 10s flow linear infinite;
+	}
+
+	@keyframes flow {
+		0% {
+			background-position: 0 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+
+		100% {
+			background-position: 0 50%;
+		}
+	}
+</style>

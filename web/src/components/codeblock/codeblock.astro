@@ -1,0 +1,22 @@
+---
+import { codeToHtml } from 'shiki'
+
+interface Props {
+	code: string
+	lang?: string
+	class?: string
+}
+
+const { code, lang, class: className } = Astro.props
+
+const html = await codeToHtml(code, {
+	lang: lang ?? 'javascript',
+	theme: 'github-dark',
+})
+---
+
+<div
+	class={`not-prose relative px-3 py-1 mx-auto bg-[#24292e] rounded-xl ${className}`}
+>
+	<div set:html={html} />
+</div>

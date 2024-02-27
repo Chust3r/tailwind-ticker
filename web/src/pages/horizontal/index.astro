@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Codeblock from '../../components/codeblock/codeblock.astro'
+import TickerMain from '../../components/ticker/ticker-main.astro'
+
+const code = `<div class='ticker ticker-mask-x *:hover:animate-pause'>
+	<div
+		class='ticker-wrapper animate-ticker-left'
+	>
+		{...}
+	</div>
+</div>
+`
+---
+
+<Layout title='Horizontal'>
+	<div class='flex flex-col mx-auto gap-2 mt-5 w-full items-center'>
+		<h2 class='text-slate-50/50 font-medium'>Structure</h2>
+		<Codeblock code={code} lang='html' class='w-fit' />
+	</div>
+	<TickerMain />
+</Layout>
